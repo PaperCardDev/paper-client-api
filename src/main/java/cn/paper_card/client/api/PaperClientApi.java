@@ -37,4 +37,18 @@ public interface PaperClientApi {
      * @throws IOException        IOException
      */
     @Nullable JsonElement sendRequest(@NotNull String uri, @Nullable JsonObject params, @NotNull String method) throws PaperResponseError, IOException;
+
+    /**
+     * 通过WebSocket投递事件
+     * @param type 事件类型
+     * @param time 发生时间，秒级时间戳
+     * @param jsonData json数据，为JsonObject类型
+     *
+     */
+    void postEvent(@NotNull String type, long time, @Nullable Object jsonData);
+
+    /**
+     * @see PaperClientApi#postEvent(String, long, Object)
+     */
+    void postEvent(@NotNull String type, @Nullable Object jsonData);
 }
