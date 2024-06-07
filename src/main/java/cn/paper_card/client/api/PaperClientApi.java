@@ -45,14 +45,9 @@ public interface PaperClientApi {
      * @param jsonData json数据，为JsonObject类型
      *
      */
-    void postEvent(@NotNull String type, long time, @Nullable Object jsonData);
+    void postEvent(@NotNull String type, long time, @Nullable JsonElement jsonData, @Nullable String receiverId);
 
-    /**
-     * @see PaperClientApi#postEvent(String, long, Object)
-     */
-    void postEvent(@NotNull String type, @Nullable Object jsonData);
-
-    void postEventAsync(@NotNull String type, long time, @Nullable JsonElement jsonData);
+    void postEventAsync(@NotNull String type, long time, @Nullable JsonElement jsonData, @Nullable String receiverId);
 
     void addEventListener(@NotNull EventListener listener);
 
