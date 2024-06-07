@@ -51,4 +51,10 @@ public interface PaperClientApi {
      * @see PaperClientApi#postEvent(String, long, Object)
      */
     void postEvent(@NotNull String type, @Nullable Object jsonData);
+
+    void postEventAsync(@NotNull String type, long time, @Nullable JsonElement jsonData);
+
+    void addEventListener(@NotNull EventListener listener);
+
+    void removeEventListener(@NotNull EventListener listener);
 }

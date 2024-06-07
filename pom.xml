@@ -6,7 +6,7 @@
 
     <groupId>cn.paper-card</groupId>
     <artifactId>paper-client-api</artifactId>
-    <version>1.3</version>
+    <version>1.4</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
