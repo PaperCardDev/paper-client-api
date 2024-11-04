@@ -16,6 +16,8 @@ public interface PaperClientApi {
 
     @NotNull String getApiBase();
 
+    @NotNull String getApiBase2();
+
     /**
      * 计算签名
      *
