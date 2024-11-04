@@ -54,4 +54,19 @@ public interface PaperClientApi {
     void addEventListener(@NotNull EventListener listener);
 
     void removeEventListener(@NotNull EventListener listener);
+
+    /**
+     * 向指定的地址发起请求，请求体和响应体都是JSON
+     * @param method HTTP请求方法，如GET
+     * @param uri 请求地址，如/qq/bind
+     * @param params 请求体
+     * @return 响应体中的data
+     * @throws PaperResponseError 响应如果不是OK（应用层）
+     * @throws IOException 网络异常
+     */
+    @Nullable JsonElement requestWithAuth(@NotNull String method, @NotNull String uri, @Nullable JsonObject params) throws PaperResponseError, IOException;
+
+    @Nullable JsonElement getWithAuth(@NotNull String uri) throws PaperResponseError, IOException;
+
+    @Nullable JsonElement postWithAuth(@NotNull String uri) throws PaperResponseError, IOException;
 }
