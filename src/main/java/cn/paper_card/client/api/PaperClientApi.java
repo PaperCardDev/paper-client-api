@@ -68,5 +68,5 @@ public interface PaperClientApi {
 
     @Nullable JsonElement getWithAuth(@NotNull String uri) throws PaperResponseError, IOException;
 
-    @Nullable JsonElement postWithAuth(@NotNull String uri) throws PaperResponseError, IOException;
+    @Nullable JsonElement postWithAuth(@NotNull String uri, @Nullable JsonObject params) throws PaperResponseError, IOException;
 }
